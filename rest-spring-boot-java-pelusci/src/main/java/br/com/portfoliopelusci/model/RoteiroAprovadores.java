@@ -27,7 +27,7 @@ public class RoteiroAprovadores implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name = "idUsuario")
-	private Usuario aprovador;
+	private User aprovador;
 	
 	public RoteiroAprovadores() {}
 
@@ -47,15 +47,15 @@ public class RoteiroAprovadores implements Serializable {
 		this.roteiro = roteiro;
 	}
 
-	public Usuario getAprovador() {
+	public User getAprovador() {
 		return aprovador;
 	}
 
-	public void setAprovador(Usuario aprovador) {
+	public void setAprovador(User aprovador) {
 		this.aprovador = aprovador;
 	}
 
-	public RoteiroAprovadores(Long id, Roteiro roteiro, Usuario aprovador) {
+	public RoteiroAprovadores(Long id, Roteiro roteiro, User aprovador) {
 		super();
 		this.id = id;
 		this.roteiro = roteiro;

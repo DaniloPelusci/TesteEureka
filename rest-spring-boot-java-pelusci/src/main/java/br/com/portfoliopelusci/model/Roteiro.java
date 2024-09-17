@@ -26,18 +26,24 @@ public class Roteiro implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+
+
+	
 	@ManyToOne
-	@JoinColumn(name = "idCliente")
-	private Cliente cliente;
+	@JoinColumn(name = "idAnalista")
+	private User analista;
 	
-	@Column(name = "idAnalista")
-	private Usuario analista;
-	
-	@Column(name = "IDREVISOR")
-	private Usuario revisor;
+	@ManyToOne
+	@JoinColumn(name = "IDREVISOR")
+	private User revisor;
 	
 	@Column(name = "texto")
 	private String texto;
+	@Column(name = "NOMECLIENTE")
+	private String nomeCliente;
+	
+	@Column(name = "EMAILCLIENTE")
+	private String emailCliente;
 	
 	@Column(name = "dataenvio")
 	private Date dataEnvio;
